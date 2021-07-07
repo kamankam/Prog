@@ -2,6 +2,7 @@ import Header from "./component/Header";
 import Main from "./component/Main";
 import University from "./component/University";
 import Goals from "./component/Goals";
+import Work from "./component/Work";
 
 const university_logo = [
   {
@@ -80,6 +81,9 @@ export default function App() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Work />
       </div>
     </div>
   );
