@@ -1,7 +1,7 @@
-export default function Goals(image, alt, text) {
+export default function Goals(image, label, text) {
   return (
-    <div>
-      <img src={image} alt={alt} />
+    <div className=" flex flex-col">
+      <img src={image} alt={label} />
       <div className="text-center">{text}</div>
     </div>
   );
