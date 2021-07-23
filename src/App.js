@@ -48,8 +48,8 @@ export default function App() {
         <Work />
       </div>
       <div>
-        {walls_logo.map((wall) => (
-          <Wall image={wall.image} alt={wall.label} text={wall.text} />
+        {walls_logo.map((wall, index) => (
+          <Wall image={wall.image} alt={wall.label} text={wall.text} index={index} />
         ))}
       </div>
     </div>
