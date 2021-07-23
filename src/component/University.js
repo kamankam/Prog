@@ -1,7 +1,7 @@
-export default function University(image, alt) {
+export default function University({ image, alt }) {
   return (
     <div>
-      <img src={image} alt={alt} />
+      <img className="w-20 h-20 " src={image} alt={alt} />
     </div>
   );
 }

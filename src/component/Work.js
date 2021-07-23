@@ -18,14 +18,14 @@ export default function Work() {
           </h1>
           <h3 className="text-left text-xl p-5">
             {"  "}{" "}
-            <a href="#" className="font-bold ">
+            <div href="#" className="font-bold ">
               87% людей, которые обучаются{" "}
-            </a>{" "}
+            </div>{" "}
             для повышения квалификации,{" "}
-            <a href="#" className="font-bold ">
+            <div href="#" className="font-bold ">
               {" "}
               сообщают о таких карьерных преимуществах,
-            </a>{" "}
+            </div>{" "}
             как повышение по службе, рост зарплаты или получение новой должности
           </h3>
           <h3 className="text-left  text-xl p-5">
