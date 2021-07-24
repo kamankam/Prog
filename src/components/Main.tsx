@@ -1,4 +1,4 @@
-import girl from "./Image/girl.png";
+import { GirlImage } from 'resources'
 
 export default function Main() {
   return (
@@ -25,8 +25,8 @@ export default function Main() {
       </div>
 
       <div className="flex-auto lg:block hidden">
-        <img className="md:rounded-full" src={girl} alt="girl" />
+        <img className="md:rounded-full" src={GirlImage} alt="girl" />
       </div>
     </div>
-  );
+  )
 }
