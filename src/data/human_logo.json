@@ -3,17 +3,28 @@
     "name": "Julio R.",
     "status": "Веб-разработчик",
     "country": "Chile",
-    "image":
-      "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4Tixoe62Y1u5VXqpM2mGPY/f4c89352619639057ca8648e64456aab/coursera-learner-a.png?auto=format%2Ccompress&dpr=2&w=202&h=202&q=40",
+    "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4Tixoe62Y1u5VXqpM2mGPY/f4c89352619639057ca8648e64456aab/coursera-learner-a.png?auto=format%2Ccompress&dpr=2&w=202&h=202&q=40",
     "text": "Я начал с нуля. С Coursera я смог учиться онлайн."
   },
   {
-    "name": "Julio R.",
-    "status": "Веб-разработчик",
-    "country": "Chile",
-    "image":
-      "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/4Tixoe62Y1u5VXqpM2mGPY/f4c89352619639057ca8648e64456aab/coursera-learner-a.png?auto=format%2Ccompress&dpr=2&w=202&h=202&q=40",
-    "text": "Я начал с нуля. С Coursera я смог учиться онлайн."
+    "name": "Sabrina M.",
+    "status": "Специалист по кадрам",
+    "country": "USA",
+    "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5LDGatPtRSYDXjfMkQF0Id/238e7338df5a05e837e1fef84cceb7fc/coursera-learner-d.png?auto=format%2Ccompress&dpr=2&w=202&h=202&q=40",
+    "text": "Мы стремимся масштабировать бизнес, завоевывать доверие и выполнять новые задачи."
+  },
+  {
+    "name": "Kara A.",
+    "status": "Выпускница онлайн-MBA",
+    "country": "USA",
+    "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/yi0wou0N5EsZGDfVejLKR/efce71fb9c36c759a5c96d37a8cdc5e0/coursera-learner-b.png?auto=format%2Ccompress&dpr=2&w=202&h=202&q=40",
+    "text": "Люблю учиться."
+  },
+  {
+    "name": "Mirela I.",
+    "status": "Обладательница профессионального сертификата IBM в области науки данных",
+    "country": "Romania",
+    "image": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7caQWjB2R0E1urlsdNUpdW/3de2d5d9afcd53e8447cd566e632be07/coursera-learner-c.png?auto=format%2Ccompress&dpr=2&w=202&h=202&q=40",
+    "text": "Меня приняли на работу!"
   }
 ]
-

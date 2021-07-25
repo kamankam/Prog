@@ -16,12 +16,10 @@ export default function Wall({ wall: { text, image, label }, index }: Props) {
         inverted ? 'flex-col-reverse' : 'flex-col'
       } sm:flex-row`}
     >
-      <div className={` text-blue-700 p-2 ${inverted ? 'hidden' : ''}`}>
-        {text}
-      </div>
-      <img className="w-96 h-64" src={image} alt={label} />
-      <div className={`text-red-700  p-2 ${inverted ? '' : 'hidden'}`}>
-        {text}
+      <div className="justify-left flex items-center p-5 text-3xl sm:flex-col lg:flex-row">
+        <div className={` p-2 ${inverted ? 'hidden' : ''}`}>{text}</div>
+        <img className="aspect-w-1 w-96 h-72" src={image} alt={label} />
+        <div className={` p-2 ${inverted ? '' : 'hidden'}`}>{text}</div>
       </div>
     </div>
   )
