@@ -77,9 +77,11 @@ export default function App() {
             />
           </svg>
 
-          {human_logo.map((human) => (
-            <Gallery human={human} />
-          ))}
+          <div className="flex">
+            {human_logo.map((human) => (
+              <Gallery human={human} />
+            ))}
+          </div>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
