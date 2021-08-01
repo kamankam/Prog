@@ -8,9 +8,13 @@ interface Props {
 
 export default function Goals({ goal: { image, label, text } }: Props) {
   return (
-    <div className="flex flex-col">
-      <img className="" src={image} alt={label} />
-      <div className="text-center">{text}</div>
+    <div className="flex-1 flex-col items-center justify-center p-5">
+      <img
+        className="min-h-32 min-w-32 max-w-32 p-5 max-h-32"
+        src={image}
+        alt={label}
+      />
+      <div className="justify-center text-center">{text}</div>
     </div>
   )
 }

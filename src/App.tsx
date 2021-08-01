@@ -5,7 +5,7 @@ import {
   University,
   Wall,
   Work,
-  Gallery,
+  GalleryCard,
 } from 'components'
 import { goals_logo, university_logo, walls_logo, human_logo } from 'data'
 
@@ -37,8 +37,8 @@ export default function App() {
         <div className="flex p-10 text-4xl font-bold">
           Добейтесь своих целей с Coursera
         </div>
-        <div className="p-22 grid sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex space-x-20">
+        <div className="flex-auto flex-row">
+          <div className="flex">
             {goals_logo.map((goal) => (
               <Goals goal={goal} />
             ))}
@@ -58,7 +58,7 @@ export default function App() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center">
         <div className="flex text-5xl font-bold">Из сообщества Coursera</div>
         <div className="flex text-3xl">
           Более 77 миллионов человек уже учатся на Coursera
@@ -76,10 +76,11 @@ export default function App() {
               clipRule="evenodd"
             />
           </svg>
-
-          {human_logo.map((human) => (
-            <Gallery human={human} />
-          ))}
+          <div className="flex">
+            {human_logo.map((human) => (
+              <GalleryCard human={human} />
+            ))}
+          </div>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
