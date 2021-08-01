@@ -76,6 +76,7 @@ export default function App() {
               clipRule="evenodd"
             />
           </svg>
+
           <div className="flex">
             {human_logo.map((human) => (
               <GalleryCard human={human} />
