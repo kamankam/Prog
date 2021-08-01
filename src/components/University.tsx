@@ -3,10 +3,10 @@ interface Props {
   alt: string
 }
 
-export default function University({ image, alt }: Props) {
+export default function UniversityCard({ image, alt }: Props) {
   return (
     <div>
-      <img className="w-20 h-20" src={image} alt={alt} />
+      <img className="w-16 h-16" src={image} alt={alt} />
     </div>
   )
 }

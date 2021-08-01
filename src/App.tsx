@@ -1,9 +1,9 @@
 import {
-  Goals,
+  GoalsCard,
   Header,
   Main,
-  University,
-  Wall,
+  UniversityCard,
+  WallCard,
   Work,
   GalleryCard,
 } from 'components'
@@ -21,13 +21,13 @@ export default function App() {
       <div>
         <div className="flex flex-col bg-gray-200">
           <div className="hidden p-10 text-center text-lg font-bold sm:block">
-            Мы сотрудничаем более чем с{' '}
+            Мы сотрудничаем более чем с
             <div className="text-blue-300">
               200 ведущими университетами и компании
             </div>
             <div className="flex flex-row justify-center space-x-20">
               {university_logo.map((logo) => (
-                <University image={logo.image} alt={logo.label} />
+                <UniversityCard image={logo.image} alt={logo.label} />
               ))}
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function App() {
         <div className="flex-auto flex-row">
           <div className="flex">
             {goals_logo.map((goal) => (
-              <Goals goal={goal} />
+              <GoalsCard goal={goal} />
             ))}
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function App() {
         </div>
         <div>
           {walls_logo.map((wall, index) => (
-            <Wall wall={wall} index={index} />
+            <WallCard wall={wall} index={index} />
           ))}
         </div>
       </div>

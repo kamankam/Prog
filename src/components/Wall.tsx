@@ -9,7 +9,7 @@ interface Props {
   index: number
 }
 
-export default function Wall({
+export default function WallCard({
   wall: { label, image, textHeader, textMainPart, textDescription },
   index,
 }: Props) {
@@ -21,29 +21,33 @@ export default function Wall({
         inverted ? 'flex-col-reverse' : 'flex-col'
       } sm:flex-row`}
     >
-      <div className="justify-left flex items-center p-5 text-3xl sm:flex-col lg:flex-row">
+      <div className="justify-left flex items-center p-5 space-x-10 sm:flex-col lg:flex-row">
         <div className="flex-col">
-          <div className={` text-blue-500  p-2 ${inverted ? 'hidden' : ''}`}>
+          <div
+            className={` text-blue-500 text-xl p-5 ${inverted ? 'hidden' : ''}`}
+          >
             {textHeader}
           </div>
-          <div className={` p-2 ${inverted ? 'hidden' : ''}`}>
+          <div className={` text-4xl p-5 ${inverted ? 'hidden' : ''}`}>
             {textMainPart}
           </div>
-          <div className={` p-2 ${inverted ? 'hidden' : ''}`}>
+          <div className={` text-3xl p-5 ${inverted ? 'hidden' : ''}`}>
             {textDescription}
           </div>
         </div>
 
-        <img className="aspect-w-1 w-96 h-72" src={image} alt={label} />
+        <img className="w-2/6 h-3/5" src={image} alt={label} />
         <div className="flex-col">
-          <div className={` text-blue-500 p-2 ${inverted ? '' : 'hidden'}`}>
+          <div
+            className={`text-blue-500 text-xl p-5 ${inverted ? '' : 'hidden'}`}
+          >
             {textHeader}
           </div>
-          <div className={` p-2 ${inverted ? '' : 'hidden'}`}>
+          <div className={`text-4xl p-5 ${inverted ? '' : 'hidden'}`}>
             {' '}
             {textMainPart}
           </div>
-          <div className={` p-2 ${inverted ? '' : 'hidden'}`}>
+          <div className={`text-3xl p-5 ${inverted ? '' : 'hidden'}`}>
             {textDescription}
           </div>
         </div>
