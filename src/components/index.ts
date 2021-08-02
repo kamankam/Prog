@@ -1,8 +1,8 @@
-import GoalsCard from './Goals'
+import GoalsCard from './GoalsCard'
 import Header from './Header'
 import Main from './Main'
 import UniversityCard from './University'
-import WallCard from './Wall'
+import WallCard from './WallCard'
 import Work from './Work'
 import GalleryCard from './GalleryCard'
 

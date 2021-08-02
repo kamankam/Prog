@@ -6,10 +6,12 @@ interface Props {
     country: string
     text: string
   }
+  index: number
 }
 
 export default function GalleryCard({
   human: { image, name, status, country, text },
+  index,
 }: Props) {
   return (
     <div className="flex-1 flex-col content-center justify-center p-5 text-center">
@@ -20,6 +22,7 @@ export default function GalleryCard({
         {country}
       </div>
       <div className="py-5 text-center text-lg">{text}</div>
+      <div className="py-5 text-center text-lg">{index}</div>
     </div>
   )
 }
