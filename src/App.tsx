@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+import { useStore } from 'effector-react'
 import {
   GoalsCard,
   Header,
@@ -10,6 +12,7 @@ import {
 import { goals_logo, university_logo, walls_logo, human_logo } from 'data'
 
 export default function App() {
+  const [currPhoto, setCurrPhoto] = useState(0)
   return (
     <div>
       <div>
@@ -64,37 +67,49 @@ export default function App() {
           Более 77 миллионов человек уже учатся на Coursera
         </div>
         <div className="flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-20 h-20"
-            viewBox="0 0 20 20"
-            fill="blue"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <button className="hover:bg-red-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-20 h-20"
+              viewBox="0 0 20 20"
+              fill="blue"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
 
           <div className="flex">
-            {human_logo.map((human) => (
-              <GalleryCard human={human} />
+            {human_logo.map((human, index) => (
+              <div>
+                {index === currPhoto && (
+                  <GalleryCard human={human} index={index} />
+                )}
+              </div>
             ))}
           </div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-24 h-24"
-            viewBox="0 0 20 20"
-            fill="blue"
+          <button
+            className="hover:bg-red-700"
+            onClick={() => {
+              setCurrPhoto(currPhoto === 3 - 1 ? 0 : currPhoto + 1)
+            }}
           >
-            <path
-              fillRule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clipRule="evenodd"
-            />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-24 h-24"
+              viewBox="0 0 20 20"
+              fill="blue"
+            >
+              <path
+                fillRule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
