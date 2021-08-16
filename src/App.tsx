@@ -13,6 +13,7 @@ import { goals_logo, university_logo, walls_logo, human_logo } from 'data'
 
 export default function App() {
   const [currPhoto, setCurrPhoto] = useState(0)
+  
   return (
     <div>
       <div>
