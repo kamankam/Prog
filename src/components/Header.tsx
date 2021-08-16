@@ -35,14 +35,28 @@ export default function Header() {
         </svg>
         <div className="space-x-4 sm:hidden lg:flex">
           <button
-            className="lg:active:bg-gray-200 lg:active:text-blue-700 md:justify-center md:h-10 md:text-gray-200 md:bg-blue-700 md:rounded-sm lg:w-20"
+            className="lg:active:bg-gray-300 lg:active:text-blue-700 text-center md:justify-center md:h-10 md:text-gray-200 md:bg-blue-700 md:rounded-sm lg:w-24 lg:bg-blue-600"
             type="button"
             aria-label="like"
           >
             Изучить
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-4 h-4"
+              fill="none"
+              viewBox="-7 -7 28 28"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
           </button>
           <input
-            className="lg:focus:border-black lg:focus:ring-1 lg:focus:ring-black lg:focus:outline-none lg:placeholder-gray-700 lg:py-1.5 lg:w-64 lg:text-black lg:border lg:border-gray-700 lg:rounded-sm"
+            className="lg:focus:border-black lg:focus:ring-1 lg:focus:ring-black lg:focus:outline-none lg:placeholder-gray-700 text-center lg:py-1.5 lg:w-64 lg:text-black lg:border lg:border-gray-700 lg:rounded-sm"
             type="text"
             placeholder="Чему вы хотите научиться?"
           />

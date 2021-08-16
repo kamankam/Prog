@@ -8,12 +8,19 @@ import {
   WallCard,
   Work,
   GalleryCard,
+  Business,
 } from 'components'
-import { goals_logo, university_logo, walls_logo, human_logo } from 'data'
+import {
+  goals_logo,
+  university_logo,
+  walls_logo,
+  human_logo,
+  business,
+} from 'data'
 
 export default function App() {
   const [currPhoto, setCurrPhoto] = useState(0)
-  
+
   return (
     <div>
       <div>
@@ -38,7 +45,7 @@ export default function App() {
         </div>
       </div>
       <div className="">
-        <div className="flex p-10 text-4xl font-bold">
+        <div className="flex justify-center p-10 text-4xl font-bold">
           Добейтесь своих целей с Coursera
         </div>
         <div className="flex-auto flex-row">
@@ -63,12 +70,17 @@ export default function App() {
         </div>
       </div>
       <div className="flex flex-col items-center">
-        <div className="flex text-5xl font-bold">Из сообщества Coursera</div>
-        <div className="flex text-3xl">
+        <div className="flex text-3xl font-bold">Из сообщества Coursera</div>
+        <div className="flex text-2xl">
           Более 77 миллионов человек уже учатся на Coursera
         </div>
         <div className="flex items-center">
-          <button className="hover:bg-red-700">
+          <button
+            className="focus:bg-green-700"
+            onClick={() => {
+              setCurrPhoto(currPhoto === 4 - 1 ? 0 : currPhoto - 1)
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-20 h-20"
@@ -93,14 +105,14 @@ export default function App() {
             ))}
           </div>
           <button
-            className="hover:bg-red-700"
+            className="focus:bg-green-700"
             onClick={() => {
-              setCurrPhoto(currPhoto === 3 - 1 ? 0 : currPhoto + 1)
+              setCurrPhoto(currPhoto === 4 - 1 ? 0 : currPhoto + 1)
             }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-24 h-24"
+              className="w-20 h-20 stroke-2"
               viewBox="0 0 20 20"
               fill="blue"
             >
@@ -112,6 +124,11 @@ export default function App() {
             </svg>
           </button>
         </div>
+      </div>
+      <div>
+        {business.map((company) => (
+          <Business image={company.image} label={company.label} />
+        ))}
       </div>
     </div>
   )
