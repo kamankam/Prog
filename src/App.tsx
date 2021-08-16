@@ -126,9 +126,12 @@ export default function App() {
         </div>
       </div>
       <div>
-        {business.map((company) => (
-          <Business image={company.image} label={company.label} />
-        ))}
+        <h1>ih'ih'ih'hoih</h1>
+        <div>
+          {business.map((company) => (
+            <Business image={company.image} label={company.label} />
+          ))}
+        </div>
       </div>
     </div>
   )
