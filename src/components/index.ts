@@ -1,21 +1,25 @@
-import Business from './Business'
 import Gallery from './gallery/Gallery'
+import Goals from './goals/Goals'
 import GalleryCard from './gallery/GalleryCard'
-import GoalsCard from './GoalsCard'
+import GoalsCard from './goals/GoalsCard'
 import Header from './Header'
 import Main from './Main'
-import UniversityCard from './University'
-import WallCard from './WallCard'
+import University from './university/University'
+import UniversityCard from './university/UniversityCard'
+import Wall from './wall/wall'
+import WallCard from './wall/WallCard'
 import Work from './Work'
 
 export {
-  Business,
+  Goals,
+  GoalsCard,
   Gallery,
   GalleryCard,
-  GoalsCard,
   Header,
   Main,
+  University,
   UniversityCard,
+  Wall,
   WallCard,
   Work,
 }
