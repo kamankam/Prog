@@ -1,23 +1,11 @@
+import { useState } from 'react'
 import { CourseraLogo } from 'resources'
 
 export default function Header() {
   return (
     <div>
       <div className="border-grey-200 flex items-center m-4 border-b-2 md:justify-between lg:justify-start">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 lg:hidden"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
+        <Menu />
         <img className="w-21 m-3 h-7" src={CourseraLogo} alt="logo_coursera" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -84,5 +72,39 @@ export default function Header() {
         </div>
       </div>
     </div>
+  )
+}
+
+function Menu() {
+  const [showMenu, setToggleMenu] = useState(false)
+
+  const handleOnClick = () => {
+    setToggleMenu(!showMenu)
+  }
+
+  return (
+    <>
+      <button onClick={handleOnClick}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 lg:hidden"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+      {showMenu && (
+        <div className="absolute left-0 top-0 w-full bg-gray-500">
+          <span>template text</span>
+        </div>
+      )}
+    </>
   )
 }
