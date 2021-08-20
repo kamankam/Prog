@@ -7,7 +7,7 @@ function Gallery() {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex text-3xl font-bold">Из сообщества Coursera</div>
+      <div className="flex p-10 text-3xl font-bold">Из сообщества Coursera</div>
       <div className="flex text-2xl">
         Более 77 миллионов человек уже учатся на Coursera
       </div>

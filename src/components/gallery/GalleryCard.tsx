@@ -22,11 +22,9 @@ export default function GalleryCard({
 }: Props) {
   return (
     <div className="flex-1 flex-col content-center justify-center p-5 text-center">
-      <img
-        className="items-center justify-center w-48 h-48"
-        src={image}
-        alt={name}
-      />
+      <div className="flex justify-center">
+        <img className="flex w-48 h-48" src={image} alt={name} />
+      </div>
       <div className="py-2 text-blue-500 text-2xl">{name}</div>
       <div className="py-2 text-base font-bold">{status}</div>
       <div className="py-2 text-center text-base border-b-2 border-blue-500">
