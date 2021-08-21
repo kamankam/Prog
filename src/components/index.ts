@@ -1,8 +1,9 @@
 import Gallery from './gallery/Gallery'
-import Goals from './goals/Goals'
 import GalleryCard from './gallery/GalleryCard'
+import Goals from './goals/Goals'
 import GoalsCard from './goals/GoalsCard'
-import Header from './Header'
+import Header from './header/Header'
+import HeaderMenu from './header/Menu'
 import Main from './Main'
 import University from './university/University'
 import UniversityCard from './university/UniversityCard'
@@ -11,11 +12,12 @@ import WallCard from './wall/WallCard'
 import Work from './Work'
 
 export {
-  Goals,
-  GoalsCard,
   Gallery,
   GalleryCard,
+  Goals,
+  GoalsCard,
   Header,
+  HeaderMenu,
   Main,
   University,
   UniversityCard,
