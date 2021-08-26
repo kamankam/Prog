@@ -1,5 +1,10 @@
-import { useState } from 'react'
 import { CourseraLogo } from 'resources'
+import { menu } from 'data'
+import { useState } from 'react'
+
+interface Props {
+  text: string
+}
 
 export default function Header() {
   return (
@@ -75,7 +80,7 @@ export default function Header() {
   )
 }
 
-function Menu() {
+function Menu({ text }: Props) {
   const [showMenu, setToggleMenu] = useState(false)
 
   const handleOnClick = () => {
@@ -102,7 +107,11 @@ function Menu() {
       </button>
       {showMenu && (
         <div className="absolute left-0 top-0 w-full bg-gray-500">
-          <span>template text</span>
+          <div>
+            {menu.map((element) => (
+              <Menu text={element.text} />
+            ))}
+          </div>
         </div>
       )}
     </>
