@@ -1,10 +1,5 @@
-import { CourseraLogo } from 'resources'
-import { menu } from 'data'
 import { useState } from 'react'
-
-interface Props {
-  text: string
-}
+import { CourseraLogo } from 'resources'
 
 export default function Header() {
   return (
@@ -80,7 +75,7 @@ export default function Header() {
   )
 }
 
-function Menu({ text }: Props) {
+function Menu() {
   const [showMenu, setToggleMenu] = useState(false)
 
   const handleOnClick = () => {
@@ -107,13 +102,66 @@ function Menu({ text }: Props) {
       </button>
       {showMenu && (
         <div className="absolute left-0 top-0 w-full bg-gray-500">
-          <div>
-            {menu.map((element) => (
-              <Menu text={element.text} />
-            ))}
-          </div>
+          <MenuSection data={menuSectionData1} />
+          <MenuSection data={menuSectionData2} />
         </div>
       )}
     </>
+  )
+}
+
+const menuSectionData1: SectionData = {
+  title: 'Цели',
+  items: [
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+  ],
+}
+const menuSectionData2: SectionData = {
+  title: 'Темы',
+  items: [{ label: 'Наука о данных' }, { label: 'Бизнес' }],
+}
+
+type SectionData = {
+  title?: string
+  items: {
+    icon?: boolean
+    label: string
+  }[]
+}
+
+interface MenuSectionProps {
+  data: SectionData
+}
+
+function MenuSection({ data: { title = '', items = [] } }: MenuSectionProps) {
+  if (!items.length) return null
+
+  return (
+    <div className="border-grey-200 flex-row mr-4 border-t">
+      {title && <div className="pb-4 pl-4 pr-0 pt-5 font-bold">{title}</div>}
+      {items.map(({ label, icon = true }) => {
+        return (
+          <div className="flex p-4 pr-1 w-full">
+            <div>{label}</div>
+            {icon && (
+              <button className="ml-auto">
+                <svg
+                  className="w-5 h-5"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>ChevronRight</title>
+                  <polygon
+                    transform="translate(33.0000000, 6.000000) scale(-1, 1)"
+                    points="0 16 14.585 32 15.999 30.586 2.828 16 15.999 1.415 14.585 0"
+                  ></polygon>
+                </svg>
+              </button>
+            )}
+          </div>
+        )
+      })}
+    </div>
   )
 }
