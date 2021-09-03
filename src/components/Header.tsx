@@ -3,13 +3,13 @@ import { CourseraLogo } from 'resources'
 
 export default function Header() {
   return (
-    <div>
-      <div className="border-grey-200 flex items-center m-4 border-b-2 md:justify-between lg:justify-start">
+    <div className="relative">
+      <div className="border-grey-200 relative flex items-center m-4 min-w-full bg-red-700 border-b-2 sm:fixed sm:justify-between md:fixed md:justify-between lg:justify-start">
         <Menu />
-        <img className="w-21 m-3 h-7" src={CourseraLogo} alt="logo_coursera" />
+        <img className="m-3 w-20 h-8" src={CourseraLogo} alt="logo_coursera" />
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 lg:hidden"
+          className="w-16 h-6 lg:hidden"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -101,7 +101,7 @@ function Menu() {
         </svg>
       </button>
       {showMenu && (
-        <div className="absolute left-0 top-0 w-full bg-gray-500">
+        <div className="absolute left-0 top-20 w-full bg-gray-500">
           <MenuSection data={menuSectionData1} />
           <MenuSection data={menuSectionData2} />
         </div>
@@ -114,6 +114,20 @@ const menuSectionData1: SectionData = {
   title: 'Цели',
   items: [
     { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'Пройти бесплатный курс', icon: false },
+    { label: 'Получите диплом' },
+    { label: 'jyflyfluyf', icon: false },
     { label: 'Получите диплом' },
   ],
 }
@@ -138,27 +152,33 @@ function MenuSection({ data: { title = '', items = [] } }: MenuSectionProps) {
   if (!items.length) return null
 
   return (
-    <div className="border-grey-200 flex-row mr-4 border-t">
-      {title && <div className="pb-4 pl-4 pr-0 pt-5 font-bold">{title}</div>}
+    <div className="border-grey-200 relative flex-col mr-4 max-w-full h-full border-t">
+      {title && (
+        <div className="relative pb-4 pl-4 pr-0 pt-5 w-full h-full font-bold bg-yellow-700 overflow-scroll">
+          {title}
+        </div>
+      )}
       {items.map(({ label, icon = true }) => {
         return (
-          <div className="flex p-4 pr-1 w-full">
-            <div>{label}</div>
-            {icon && (
-              <button className="ml-auto">
-                <svg
-                  className="w-5 h-5"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <title>ChevronRight</title>
-                  <polygon
-                    transform="translate(33.0000000, 6.000000) scale(-1, 1)"
-                    points="0 16 14.585 32 15.999 30.586 2.828 16 15.999 1.415 14.585 0"
-                  ></polygon>
-                </svg>
-              </button>
-            )}
+          <div>
+            <div className="flex p-4 pr-1 w-full h-full bg-yellow-600 overflow-y-scroll">
+              <div>{label}</div>
+              {icon && (
+                <button className="ml-auto">
+                  <svg
+                    className="w-5 h-5"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>ChevronRight</title>
+                    <polygon
+                      transform="translate(33.0000000, 6.000000) scale(-1, 1)"
+                      points="0 16 14.585 32 15.999 30.586 2.828 16 15.999 1.415 14.585 0"
+                    ></polygon>
+                  </svg>
+                </button>
+              )}
+            </div>
           </div>
         )
       })}

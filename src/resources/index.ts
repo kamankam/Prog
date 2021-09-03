@@ -1,4 +1,4 @@
-import CourseraLogo from './image/coursera.png'
+import CourseraLogo from './svg/coursera.svg'
 import GirlImage from './image/girl.png'
 
 export { CourseraLogo, GirlImage }
