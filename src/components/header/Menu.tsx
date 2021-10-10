@@ -1,11 +1,12 @@
-import { useState } from 'react'
+import { useStore } from 'effector-react'
+import { $isMenuHeaderVisible, setMenuHeaderVisible } from 'models/header_menu'
 import { CourseraLogo } from 'resources'
 
 export default function Menu() {
-  const [menu, setMenu] = useState(false)
+  const isMenuHeaderVisible = useStore($isMenuHeaderVisible)
 
   const handleOnMenuClick = () => {
-    setMenu(true)
+    setMenuHeaderVisible(true)
   }
 
   return (
@@ -13,9 +14,9 @@ export default function Menu() {
       <button onClick={handleOnMenuClick}>
         <OpenMenuIcon />
       </button>
-      {menu && (
+      {isMenuHeaderVisible && (
         <div className="absolute left-0 top-0 w-full bg-white">
-          <MenuHeader setMenu={setMenu} />
+          <MenuHeader />
           <MenuSection data={sectionDataA} />
           <MenuSection data={sectionDataB} />
           <MenuSection data={sectionDataC} />
@@ -26,13 +27,9 @@ export default function Menu() {
   )
 }
 
-interface MenuHeaderProps {
-  setMenu: (value: React.SetStateAction<boolean>) => void
-}
-
-function MenuHeader({ setMenu }: MenuHeaderProps) {
+function MenuHeader() {
   const handleOnCloseClick = () => {
-    setMenu(false)
+    setMenuHeaderVisible(false)
   }
 
   return (
