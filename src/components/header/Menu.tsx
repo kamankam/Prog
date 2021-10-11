@@ -40,7 +40,7 @@ function MenuHeader() {
         alt="logo_coursera"
       />
       <button className="ml-auto mr-4" onClick={handleOnCloseClick}>
-        <CloseMenuIcon />
+        <CloseIcon />
       </button>
     </div>
   )
@@ -128,7 +128,8 @@ const sectionDataD: SectionData = {
 }
 
 // Icons
-const CloseMenuIcon = () => (
+// todo: pass color
+export const CloseIcon = ({ color = 'grey' }: { color?: string }) => (
   <svg
     className="w-6 h-6"
     viewBox="0 0 48 48"
