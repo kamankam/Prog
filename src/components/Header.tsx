@@ -4,7 +4,7 @@ import { CourseraLogo } from 'resources'
 export default function Header() {
   return (
     <div className="relative">
-      <div className="border-grey-200 relative flex items-center m-4 min-w-full bg-red-700 border-b-2 sm:fixed sm:justify-between md:fixed md:justify-between lg:justify-start">
+      <div className="border-grey-200 relative flex items-center min-w-full bg-red-700 border-b-2 sm:fixed sm:justify-between md:fixed md:justify-between lg:justify-start">
         <Menu />
         <img className="m-3 w-20 h-8" src={CourseraLogo} alt="logo_coursera" />
         <svg
@@ -76,6 +76,7 @@ export default function Header() {
 }
 
 function Menu() {
+  //const storeMenu = useStore(Menustatus)
   const [showMenu, setToggleMenu] = useState(false)
 
   const handleOnClick = () => {
@@ -84,6 +85,7 @@ function Menu() {
 
   return (
     <>
+      <div className="bg-yellow-600"></div>
       <button onClick={handleOnClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -100,6 +102,7 @@ function Menu() {
           />
         </svg>
       </button>
+
       {showMenu && (
         <div className="absolute left-0 top-20 w-full bg-gray-500">
           <MenuSection data={menuSectionData1} />
