@@ -12,12 +12,12 @@ export default function App() {
   return (
     <>
       <Header />
-      <Main />
+      {/* <Main />
       <University />
       <Goals />
       <Work />
       <Wall />
-      <Gallery />
+      <Gallery /> */}
     </>
   )
 }

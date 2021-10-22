@@ -4,12 +4,12 @@ import Goals from './goals/Goals'
 import GoalsCard from './goals/GoalsCard'
 import Header from './header/Header'
 import HeaderMenu from './header/Menu'
-import Main from './Main'
 import University from './university/University'
 import UniversityCard from './university/UniversityCard'
 import Wall from './wall/wall'
 import WallCard from './wall/WallCard'
 import Work from './Work'
+import Main from './Main'
 
 export {
   Gallery,
