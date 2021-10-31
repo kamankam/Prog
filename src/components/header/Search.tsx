@@ -1,7 +1,7 @@
 import { SearchIcon } from 'components/header'
 import { useStore } from 'effector-react'
 import { $searchValue, setSearchValue, setSearchVisible } from 'models/search'
-import { CloseIcon } from './Menu'
+import { CloseIcon } from '.'
 
 // todo: add css styles
 export default function SearchHeader() {
@@ -13,8 +13,11 @@ export default function SearchHeader() {
 
   return (
     <div className="relative flex w-full h-20">
-      <button className="ml-4" onClick={() => console.log('handle search')}>
-        <SearchIcon />
+      <button
+        className="aspect-w-20 aspect-h-20 w-20 bg-blue-600"
+        onClick={() => console.log('handle search')}
+      >
+        <SearchIcon color="white" />
       </button>
 
       <input
@@ -26,7 +29,7 @@ export default function SearchHeader() {
       />
 
       <button className="ml-auto mr-4" onClick={handleOnSearchClick}>
-        <CloseIcon />
+        <CloseIcon color="blue-600" />
       </button>
     </div>
   )

@@ -1,6 +1,7 @@
+import CloseIcon from './CloseIcon'
 import DesktopLayout from './DesktopLayout'
-import SearchIcon from './Icon'
 import MobileLayout from './MobileLayout'
 import SearchHeader from './Search'
+import SearchIcon from './SearchIcon'
 
-export { SearchHeader, SearchIcon, DesktopLayout, MobileLayout }
+export { CloseIcon, DesktopLayout, MobileLayout, SearchHeader, SearchIcon }
