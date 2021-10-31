@@ -1,9 +1,8 @@
-// todo: pass color
-export default function SearchIcon({ color = 'grey' }: { color?: string }) {
+export default function SearchIcon({ color = 'black' }: { color?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className={`w-6 h-6 text-${color}`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
