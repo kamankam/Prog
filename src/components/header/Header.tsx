@@ -4,5 +4,10 @@ import { useState } from 'react'
 export default function Header() {
   const [mobileLayout] = useState(true)
 
-  return <>{mobileLayout ? <MobileLayout /> : <DesktopLayout />}</>
+  return (
+    <>
+      <MobileLayout />
+      <DesktopLayout />
+    </>
+  )
 }

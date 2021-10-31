@@ -12,7 +12,7 @@ export default function MobileLayout() {
   }
 
   return (
-    <div className="border-grey-200 flex items-center justify-between m-4 border-b-2">
+    <div className="border-grey-200 flex items-center justify-between m-4 border-b-2 sm:flex lg:hidden">
       <Menu />
       <img className="w-21 m-3 h-7" src={CourseraLogo} alt="logo_coursera" />
       <button onClick={handleOnSearchClick}>

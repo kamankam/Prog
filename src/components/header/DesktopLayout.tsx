@@ -1,6 +1,6 @@
 export default function DesktopLayout() {
   return (
-    <div className="border-grey-200 flex items-center m-4 border-b-2 md:justify-between lg:justify-start">
+    <div className="border-grey-200 flex items-center m-4 border-b-2 sm:hidden md:justify-between lg:flex lg:justify-start">
       <div className="flex space-x-4">
         <button
           className="lg:active:bg-gray-300 lg:active:text-blue-700 flex align-middle text-center md:justify-center md:h-10 md:text-gray-200 md:bg-blue-700 md:rounded-sm lg:w-28 lg:bg-blue-600"
